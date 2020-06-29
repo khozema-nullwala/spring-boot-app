@@ -3,6 +3,6 @@
 This project consist a Dockerfile to package into a docker image use the command
 
 ```bash
-cd shopping
+cd spring-boot-app
 docker image build -t <docker-id>/shopping:latest .
 ```
