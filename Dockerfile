@@ -9,7 +9,7 @@ COPY .mvn .mvn
 COPY pom.xml .
 COPY src src
 # RUN THE MAVEN COMMAND
-RUN ./mvnw install -DskipTests
+RUN chmod +x ./mvnw && ./mvnw install -DskipTests
 RUN mkdir -p target/dependency && (cd target/dependency; jar -xf ../*.jar)
 
 # FINAL APP IMAGE
